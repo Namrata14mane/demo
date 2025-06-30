@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mangalmurti Infra Space Creators Pvt. Ltd.</title>
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-0gYlZkqSgF/UzFuMQ3U3DbKHv/V7wAVvNl7vAh2S60Ey7ewcFvZz8+U0jWTZBpUTDbzXmM7FStXPoz4SzrIDiA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  <style>
+
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      color: #070707;
+       padding-top: 100px; /* adjust based on navbar height */
+    }
+#about, #vision, #pmay, #project, #strengths, #future, #contact, #directors {
+  scroll-margin-top: 120px; /* adjusts scroll jump to show heading */
+}
+
+    /* Top bar + nav */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #ff5622;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    .logo img {
+      height: 85px;
+      width: auto;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.3rem 0.5rem;
+    }
+    .nav-links a:hover {
+      text-decoration:underline;
+    }
+.nav-links a:last-child {
+  margin-right: 1rem; /* Adjust value as needed */
+}
+
+    /* Header Banner */
+    .header-banner {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+      background-size: cover;
+      padding: 8rem 1rem;
+      text-align: center;
+      color: #fff;
+    }
+
+  
+    .header-banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* dark overlay for vibrancy */
+      z-index: 1;
+    }
+    .header-banner h1,
+    .header-banner p {
+      position: relative;
+      z-index: 2;
+    }
+    .header-banner h1 {
+      font-size: 2rem;
+      background: rgba(255, 87, 34, 0.7);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+
+    /* explore more button */
+
+   .explore-button {
+  position: absolute;
+  bottom: 60px; /* ⬅️ raised from bottom */
+  left: 20px;
+  background-color: #ff5622e7;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.explore-button:hover {
+  background-color: #e81288;
+  text-decoration: underline;
+}
+
+/* bottom button on contact page */
+.explore-button.small {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  background-color: #ff5622e7;
+}
+
+
+
+
+    /* Shared section styling */
+/* Shared section styling - FULL WIDTH */
+section {
+  padding: 4rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+    h2 {
+      color: #2229ff;
+      text-align: center;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #009688;
+      margin: 0.5rem auto;
+      border-radius: 2px;
+    }
+
+    #about p {
+  font-size: 1.3rem;   /* or larger, e.g., 1.4rem, as you prefer */
+  line-height: 1.7;
+  color: #2d2d2d;         /* or your chosen text color */
+}
+
+  #vision p {
+  font-size: 1.3rem;   /* or 1.4rem if you want even bigger */
+  line-height: 1.7;
+  color: #0c8df7fc;         /* or your preferred color */
+}
+/* Target all text inside PMAY section boxes */
+#pmay .pmay-box,
+#pmay .pmay-box * {
+  color: #000 !important;  /* You can change #000 to your preferred font color */
+}
+
+
+ #project p,
+#project ul li {
+  font-size: 1.3rem;   /* Adjust if you'd like: 1.4rem for bigger */
+  line-height: 1.7;
+  color: #031d65;         /* Or your chosen text color */
+}
+
+#contact p {
+  font-size: 1.3rem;   /* Consistent with other sections */
+  line-height: 1.7;
+  color: #290202;         /* Or #fff if your Contact section has a dark background */
+}
+
+#strengths p,
+#strengths ul li {
+  font-size: 1.3rem;   /* Or 1.4rem if you want a touch larger */
+  line-height: 1.7;
+  color: #022457;         /* Keep it consistent with other sections */
+}
+.alt-section {
+  position: relative;
+  padding: 4rem 2rem;
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.alt-section::before,
+.alt-section::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  z-index: 0;
+}
+.alt-section > .grid-container {
+  position: relative;
+  z-index: 1;
+}
+
+.alt-section h2,
+#contact h2,
+#directors h2 {
+  font-size: 2.5rem;     /* or choose your preferred size, e.g., 2.2rem, 2.8rem */
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;           /* Use #fff if the section has a dark background */
+  margin-bottom: 1rem;
+}
+#contact h2,
+#directors h2{
+     color: #2b08f4; 
+}
+.alt-section h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+@media (min-width: 700px) {
+  .alt-section h2 {
+    font-size: 2.5rem; /* Even larger on bigger screens */
+  }
+}
+
+#project .grid-container img {
+  max-width: 90%;  /* Shrinks image width a bit compared to full 100% */
+  max-height: 300px; /* Limit height to make it consistent */
+  object-fit: contain; 
+  display: block;
+  margin: auto;
+}
+
+
+
+    .grid-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .grid-container ul li {
+      background-color: #ffffff26;
+      color: #fff;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .grid-container ul li i {
+      font-size: 1.4rem;
+      color: #fff23c;
+    }
+
+    #project span {
+      color: #2a1fffc3;
+      font-weight: bold;
+    }
+
+
+
+
+
+
+/* Base section style */
+.alt-section {
+  position: relative;
+  padding: 4rem 1rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* COMPANY PROFILE background */
+#about {
+  background: linear-gradient(135deg, #ffdd0260 40%, #ee211e67 100%);
+ 
+}
+
+/* VISION & MISSION background */
+#vision {
+  background: linear-gradient(135deg, #0dd23797 40%, #f3219175 100%);
+ 
+}
+
+.vision-mission-container {
+  display: flex;
+  justify-content: center;  /* This centers horizontally */
+  align-items: center;       /* This aligns vertically if height is set */
+  gap: 2rem;                 /* Adds space between content and image */
+  flex-wrap: wrap;           /* Responsive on smaller screens */
+  width: 100%;
+}
+
+.vision-boxes {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.image-box {
+  flex: 1;
+  max-width: 500px;
+}
+.vision-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* OUR PROJECT background */
+#project {
+  background: linear-gradient(135deg, #6b06f042 40%, #7d0381e6 100%);
+  
+  color: #333;
+}
+
+/*  WHY CHOOSE US background */
+#strengths {
+  background: linear-gradient(135deg, #e126a985 40%, #13cef86c 100%);
+  
+}
+
+
+
+.directors-section {
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.directors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.director {
+  text-align: center;
+  width: 150px;
+}
+
+.director img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #e2e1f6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.director p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #024c45;
+}
+
+#directors {
+  position: relative;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at top left, rgba(255, 86, 34, 0.326), transparent 50%),
+              radial-gradient(circle at bottom right, rgba(0, 150, 135, 0.53), transparent 50%);
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+
+#contact {
+  position: relative;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at top left, rgba(2, 181, 163, 0.838) , transparent 50%),
+              radial-gradient(circle at bottom right, rgba(241, 78, 29, 0.884), transparent 50%);
+  background-color: #f9f9f9;
+  overflow: hidden;   
+}
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .grid-container img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.6;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .highlight {
+      color: #1c2ef7;
+      font-weight: bold;
+    }
+    .button {
+      background: #009688;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #00796b;
+    }
+
+    @media (min-width: 700px) {
+      .grid-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+}
+
+/* Hide nav links by default on mobile */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Hamburger initially hidden */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ff5622;
+    position: absolute;
+    top: 85px; /* height of your navbar */
+    left: 0;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    color: white;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+}
+
+
+
+    footer {
+      background: #ff5622e7;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 0rem;
+    }
+  </style>
+</head>
+<body>
+
+ <div class="top-bar">
+  <div class="logo">
+    <img src="Images/Mangalmurti_Logo.jpg" alt="Mangalmurti Logo" />
+  </div>
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="nav-links" id="navLinks">
+    <a href="#about" onclick="closeMenu()">About Us</a>
+    <a href="#vision" onclick="closeMenu()">Vision & Mission</a>
+    <a href="#pmay" onclick="closeMenu()">PMAY</a>
+    <a href="#project" onclick="closeMenu()">Project</a>
+    <a href="#strengths" onclick="closeMenu()">Strengths</a>
+    <a href="#future" onclick="closeMenu()">Goal</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
+</div>
+
+
+
+  <div class="header-banner">
+    <h1 style="font-size: 2.5rem;">Mangalmurti Infra Space Creators Pvt. Ltd.</h1>
+    <p style="font-size: 1.5rem;">Your trusted partner in affordable housing</p>
+    <a href="#about" class="explore-button">
+  Explore More <i class="fas fa-arrow-down"></i>
+</a>
+  </div>
+
+<section id="about" class="alt-section" style="padding-top: 2rem; padding-bottom: 2rem;">
+  <h2 style="font-size: 2.5rem; margin: 0.5rem 0;">About Us</h2>
+  <div class="grid-container reverse">
+    <img src="Images/Building_image.jpg" alt="Company profile" />
+    <div>
+      <p>Mangalmurti Infra Space Creators Pvt. Ltd. is a 
+        <span class="highlight">trusted real estate developer</span> focused on affordable housing. 
+        Registered under the Companies Act, headquartered in Thane, we specialize in 
+        <span class="highlight">PMAY (Pradhan Mantri Awas Yojana)</span> projects.
+      </p>
+      <p>Our commitment is to provide affordable, quality housing that supports the dream of home ownership for low-income families.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="vision" class="alt-section" style="padding-top: 2rem;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Vision & Mission</h2>
+  <div class="grid-container" style="align-items: start;">
+    <div class="vision-mission-container">
+       <div class="vision-boxes">
+        <div class="image-box">
+      <ul>
+        <li style="padding: 0.7rem 1rem; font-size: 1rem; color: white;"><i class="fa-solid fa-eye" style="color: black;"></i> <span style="font-weight: bold; color: black;">Vision:</span>To be a leading name in affordable housing, creating inclusive communities that uplift families and support national housing goals.</li>
+        <li style="padding: 0.7rem 1rem; font-size: 1rem; color: white;"><i class="fa-solid fa-bullseye" style="color: black;"></i> <span style="font-weight: bold; color: black;">Vision:</span>To provide affordable, quality housing to low-income families, enabling home ownership in Navi Mumbai.</li>
+      </ul>
+    </div>
+       </div>
+       </div>
+    <img src="Images/business-strategy-success-target-goals.jpg" alt="Vision mission housing" style="max-height: 420px; max-width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);" />
+  </div>
+</section>
+
+
+
+
+<!-- ...other HTML remains unchanged -->
+<section id="project" class="alt-section" style="padding-top: 0.5rem;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Our Project</h2>
+  <div class="grid-container" style="align-items: start;">
+    <div>
+      <ul>
+        <li style="padding: 0.7rem 1rem; font-size: 1.1rem;"><i class="fas fa-users" style="color: black;"></i> Target buyers: Low-income groups</li>
+        <li style="padding: 0.7rem 1rem; font-size: 1.1rem;"><i class="fas fa-building" style="color: black;"></i> Project type: Affordable housing under PMAY</li>
+        <li style="padding: 0.7rem 1rem; font-size: 1.1rem;"><i class="fas fa-rupee-sign" style="color: black;"></i> Price: <span>₹25 lakh per unit</span></li>
+        <li style="padding: 0.7rem 1rem; font-size: 1.1rem;"><i class="fas fa-ruler-combined" style="color: black;"></i> Unit size: <span>420 sq.ft. carpet area</span></li>
+        <li style="padding: 0.7rem 1rem; font-size: 1.1rem;"><i class="fas fa-leaf" style="color: black;"></i> Eco-friendly, sustainable design</li>
+        <li style="padding: 0.7rem 1rem; font-size: 1.1rem;"><i class="fas fa-hands-helping" style="color: black;"></i> Subsidy assistance for eligible buyers</li>
+        <li style="padding: 0.7rem 1rem; font-size: 1.1rem;"><i class="fas fa-home" style="color: black;"></i> Total Units: <span>1,42,708 units</span></li>
+      </ul>
+    </div>
+    <img src="Images/Picture2.jpg" alt="Our Project housing" style="max-height: 420px; max-width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);" />
+  </div>
+</section>
+<!-- ...rest of HTML remains unchanged -->
+
+
+<!------------------------------PMAY project---------->
+
+<section id="pmay" class="alt-section" style="padding-top: 0.5rem; background: linear-gradient(135deg, #47bfebb1 40%, #ebe7139d 100%); padding-top: 2rem;">
+  <h2 style="font-size: 2.5rem;">About PMAY</h2>
+<div class="grid-container" style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem;">
+    <div class="pmay-box">
+     <ul>
+        <li><i class="fa-solid fa-bullseye" style="color: black;"></i> Launched in 2015 by Government of India</li>
+        <li><i class="fa-solid fa-house" style="color: black;"></i> Goal: Housing for All – Affordable homes for urban poor</li>
+        <li><i class="fa-solid fa-user-check" style="color: black;"></i> Credit-linked subsidy on home loans (CLSS)</li>
+        
+        <li><i class="fa-solid fa-users" style="color: black;"></i> Focus on EWS, LIG, MIG segments</li>
+        <li><i class="fa-solid fa-female" style="color: black;"></i> Preference to women, senior citizens, and differently-abled</li>
+      </ul>
+    </div>
+    <img src="Images/PMAY1.jpg" alt="PMAY housing schemes" style="max-height: 420px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);" />
+  </div>
+</section>
+
+
+<!------------------------------------------------end----------------------->
+
+<section id="strengths" class="alt-section" style="padding-top: 2rem;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Why Choose Us?</h2>
+<div class="grid-container" style="display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem;">
+
+    <img src="Images/wcu.jpg" alt="Why choose us" style="max-height: 420px; max-width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);" />
+    <div>
+     <ul>
+  <li><i class="fa-solid fa-house-chimney" style="color: black;"></i> PMAY-aligned affordable housing</li>
+  <li><i class="fa-solid fa-city" style="color: black;"></i> Expertise in urban low-cost housing</li>
+  <li><i class="fa-solid fa-hands-helping" style="color: black;"></i> Hassle-free loan & subsidy documentation assistance</li>
+  <li><i class="fa-solid fa-check-circle" style="color: black;"></i> 100% transparency and legal compliance</li>
+
+  <li><i class="fa-solid fa-people-group" style="color: black;"></i> Customer-first approach</li>
+</ul>
+
+    </div>
+  </div>
+</section>
+
+
+<!-----------------------------------future plan------------------------>
+
+
+<section id="future" class="alt-section" style=" padding-top: 2rem; background: linear-gradient(135deg, #eb13718c 40%, #ffc1076b 100%); padding-top: 2rem;">
+  <h2 style="font-size: 2.5rem;">Future Plans</h2>
+  <div class="grid-container" style="align-items: start;">
+    <div>
+      <ul>
+        <li><i class="fa-solid fa-map-location-dot" style="color: black;"></i> Expand affordable housing footprint across Maharashtra</li>
+        <li><i class="fa-solid fa-wifi" style="color: black;"></i> Integrate smart amenities into budget housing</li>
+        <li><i class="fa-solid fa-house-user" style="color: black;"></i> Explore rental housing under government schemes</li>
+      </ul>
+    </div>
+    <img src="Images/plan.jpeg" alt="Future housing plan" style="max-height: 420px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);" />
+  </div>
+</section>
+
+
+
+
+<!---------------------------------------------------------end0----------------------------->
+
+
+<!----------------------------
+  <section id="directors" class="directors-section" style="padding-bottom: 2rem; padding-top: 2rem;">
+   <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Our Directors</h2>
+  <div class="directors-container">
+    <div class="director">
+      <img src="gurav.jpg" alt="Aditya Gurav">
+      <p>Aditya Gurav</p>
+    </div>
+    <div class="director">
+      <img src="nilesh.jpg" alt="Nilesh Pandharkar">
+      <p>Nilesh Pandharkar</p>
+    </div>
+    <div class="director">
+      <img src="toke.jpg" alt="Sachin Toke">
+      <p>Sachin Toke</p>
+    </div>
+  </div>
+</section>
+
+---->
+
+<section id="directors" style="
+  background: radial-gradient(circle at top left, rgba(2, 181, 163, 0.838), transparent 50%),
+              radial-gradient(circle at bottom right, rgba(255, 86, 34, 0.845), transparent 50%);
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+  overflow: hidden;">
+  <h2 style="font-size: 2.5rem; color: #2b08f4; margin-bottom: 2rem; text-align: center;">Our Directors</h2>
+  <div class="directors-cards" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: auto;">
+    
+    <!-- Director Card 1 -->
+    <div class="card" style="text-align: center; max-width: 280px;">
+      <img src="Images/gurav.jpg" alt="Aditya Gurav" style="width: 170px; height: 170px; border-radius: 50%; object-fit: contain; background: white; padding: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+      <h3 style="margin: 0; font-size: 1.2rem;">Aditya Gurav</h3>
+      <p style="color: #6ac045; font-weight: bold; margin: 0.3rem 0;">Managing Director</p>
+      <p style="font-size: 0.95rem; color: #555;">Experienced in strategic planning, development in real estate domain.</p>
+      <div class="social-icons" style="margin-top: 0.5rem;">
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-instagram"></i></a>
+        
+      </div>
+    </div>
+
+    <!-- Director Card 2 -->
+    <div class="card" style="text-align: center; max-width: 280px;">
+      <img src="Images/nilesh.jpg" alt="Nilesh Pandharkar" style="width: 170px; height: 170px; border-radius: 50%; object-fit: contain; background: white; padding: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+      <h3 style="margin: 0; font-size: 1.2rem;">Nilesh Pandharkar</h3>
+      <p style="color: #6ac045; font-weight: bold; margin: 0.3rem 0;">Finance Director</p>
+      <p style="font-size: 0.95rem; color: #555;">Expert in real estate finance, regulatory compliance and investor relations.</p>
+      <div class="social-icons" style="margin-top: 0.5rem;">
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-instagram"></i></a>
+        
+      </div>
+    </div>
+
+    <!-- Director Card 3 -->
+    <div class="card" style="text-align: center; max-width: 280px;">
+      <img src="Images/toke.jpg" alt="Sachin Toke" style="width: 170px; height: 170px; border-radius: 50%; object-fit: contain; background: white; padding: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+      <h3 style="margin: 0; font-size: 1.2rem;">Sachin Toke</h3>
+      <p style="color: #6ac045; font-weight: bold; margin: 0.3rem 0;">Operations Director</p>
+      <p style="font-size: 0.95rem; color: #555;">Driving operational excellence and ensuring timely project delivery.</p>
+      <div class="social-icons" style="margin-top: 0.5rem;">
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="margin: 0 5px; color: #000;"><i class="fab fa-instagram"></i></a>
+       
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--------------------------------------------------------end---------------->
+  <section id="contact" style="padding-bottom: 2rem; padding-top: 2rem;">
+    <h2>Contact Us</h2>
+    <div class="grid-container">
+      <div>
+        <p>Head Office: 804, Sunrise Business Park, Wagle Estate,Thane, Maharashtra</p>
+        <p>Contact: +91 9324520454</p>
+        <a class="button">Email Us: mangalmurtiinfraspace@gmail.com</a>
+        <br><br>
+        <a href="#about" class="explore-button small">Go Up<i class="fas fa-arrow-up"></i></a>
+
+      </div>
+      <img src="Images/connect-incoming-call-communication-concept.jpg" alt="Contact us support" />
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mangalmurti Infra Space Creators Pvt. Ltd. All rights reserved.</p>
+  </footer>
+
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+
+  function closeMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.remove("show");
+  }
+</script>
+
+
+</body>
+</html>
